@@ -503,10 +503,15 @@ def diff() -> str:
 
     <text x="56" y="298" fill="{MUTED}">   conversions: identical</text>
     <text x="56" y="324" fill="{AMBER}">   verdict: an argument, not a measurement</text>
+    <rect x="404" y="310" width="10" height="18" fill="{AMBER}" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.35;0.4;0.6;0.65;1" dur="1.3s" repeatCount="indefinite"/>
+    </rect>
   </g>
 
   <g font-family="{MONO}" font-size="12.5">
-    <rect x="820" y="100" width="316" height="196" rx="10" fill="#0a1119" stroke="{VIOLET}" stroke-opacity="0.35"/>
+    <rect x="820" y="100" width="316" height="196" rx="10" fill="#0a1119" stroke="{VIOLET}" stroke-opacity="0.35">
+      <animate attributeName="stroke-opacity" values="0.22;0.55;0.22" dur="7s" repeatCount="indefinite"/>
+    </rect>
     <text x="844" y="128" fill="{VIOLET}" font-size="11.5" letter-spacing="1.8">MODELS IN THE BUILD</text>
     <text x="844" y="158" fill="{INK}">last-touch</text>
     <text x="844" y="182" fill="{INK}">first-touch</text>
