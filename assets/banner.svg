@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 440" width="1600" height="440" role="img" aria-labelledby="title desc">
+  <title id="title">Het Patel — full-stack engineer for advertising platforms</title>
+  <desc id="desc">An abstract aurora banner with a pacing curve and orbital rings, naming Het Patel and the three systems in the portfolio.</desc>
+
+  <defs>
+    <linearGradient id="nameFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#e9f5ff"/>
+      <stop offset="1" stop-color="#3ddc97"/>
+    </linearGradient>
+
+    <linearGradient id="curveFill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3ddc97" stop-opacity="0"/>
+      <stop offset="0.35" stop-color="#3ddc97"/>
+      <stop offset="0.7" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#f6b73c"/>
+    </linearGradient>
+
+    <linearGradient id="ringStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#3ddc97" stop-opacity="0.15"/>
+    </linearGradient>
+
+    <linearGradient id="hairline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3ddc97" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#a78bfa" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#f6b73c" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="mintGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#3ddc97" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#3ddc97" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="violetGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7c6bff" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#7c6bff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="amberGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f6b73c" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#f6b73c" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+
+    <mask id="fadeGrid">
+      <rect width="1600" height="440" fill="url(#gridFade)"/>
+    </mask>
+    <linearGradient id="gridFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="0.78" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="softBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+    <filter id="dotGlow" x="-300%" y="-300%" width="700%" height="700%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="440" fill="#05070d"/>
+  <rect width="1600" height="440" fill="url(#grid)" mask="url(#fadeGrid)"/>
+
+  <!-- aurora -->
+  <g filter="url(#softBlur)">
+    <circle cx="250" cy="330" r="290" fill="url(#mintGlow)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1090" cy="70" r="260" fill="url(#violetGlow)">
+      <animate attributeName="opacity" values="0.9;0.55;0.9" dur="14s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1440" cy="380" r="230" fill="url(#amberGlow)">
+      <animate attributeName="opacity" values="0.5;0.85;0.5" dur="9s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- orbital rings -->
+  <g stroke="url(#ringStroke)" fill="none">
+    <circle cx="1265" cy="220" r="168" stroke-width="1" stroke-opacity="0.55"/>
+    <circle cx="1265" cy="220" r="120" stroke-width="1" stroke-opacity="0.4"/>
+    <circle cx="1265" cy="220" r="72" stroke-width="1" stroke-opacity="0.3"/>
+    <circle cx="1265" cy="220" r="214" stroke-width="1" stroke-dasharray="2 10" stroke-opacity="0.55">
+      <animateTransform attributeName="transform" type="rotate" from="0 1265 220" to="360 1265 220" dur="80s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- pacing curve: the motif of the portfolio -->
+  <path id="curve" d="M60 436 C 220 426, 380 406, 520 378 S 700 332, 820 294 S 980 250, 1100 206 S 1300 130, 1540 66"
+        fill="none" stroke="url(#curveFill)" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.9"/>
+  <path d="M60 436 C 220 426, 380 406, 520 378 S 700 332, 820 294 S 980 250, 1100 206 S 1300 130, 1540 66"
+        fill="none" stroke="url(#curveFill)" stroke-width="10" stroke-linecap="round" stroke-opacity="0.12"/>
+  <circle r="4.5" fill="#3ddc97" filter="url(#dotGlow)">
+    <animateMotion dur="14s" repeatCount="indefinite" rotate="auto" keyPoints="0;1;0" keyTimes="0;0.55;1" calcMode="linear">
+      <mpath href="#curve"/>
+    </animateMotion>
+  </circle>
+  <circle r="3" fill="#f6b73c" filter="url(#dotGlow)">
+    <animateMotion dur="14s" begin="7s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;0.55;1" calcMode="linear">
+      <mpath href="#curve"/>
+    </animateMotion>
+  </circle>
+
+  <!-- text -->
+  <g font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+    <text x="72" y="132" fill="#6f7f96" font-size="13" font-weight="600" letter-spacing="4.6">
+      ASSOCIATE PRODUCT ENGINEER · FULL STACK
+    </text>
+
+    <text x="68" y="216" fill="url(#nameFill)" font-size="82" font-weight="700" letter-spacing="-2.5">
+      Het Patel
+    </text>
+
+    <text x="72" y="262" fill="#a9b8cc" font-size="21" font-weight="400" letter-spacing="0.2">
+      Ad-tech systems: spend pacing, attribution, and anomaly detection.
+    </text>
+
+    <rect x="72" y="292" width="259" height="1" fill="url(#hairline)"/>
+
+    <g fill="#7e8ea6" font-size="13.5" font-weight="500" letter-spacing="1.4">
+      <text x="72" y="326">187 TESTS</text>
+      <text x="196" y="326">3 SERVICES</text>
+      <text x="330" y="326">PYTHON</text>
+      <text x="426" y="326">SQL SERVER</text>
+      <text x="552" y="326">VUE 3</text>
+    </g>
+  </g>
+
+  <!-- corner ticks -->
+  <g stroke="#ffffff" stroke-opacity="0.16" stroke-width="1">
+    <path d="M40 40h14M40 40v14" fill="none"/>
+    <path d="M1560 400h-14M1560 400v-14" fill="none"/>
+  </g>
+</svg>
