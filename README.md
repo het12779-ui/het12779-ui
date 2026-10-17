@@ -1,164 +1,192 @@
-<a href="https://github.com/het12779-ui">
-  <img src="assets/banner.svg" alt="Het Patel — full-stack engineer building ad-tech systems: spend pacing, attribution, anomaly detection" width="100%">
-</a>
+<a href="https://github.com/het12779-ui"><img src="assets/hero.svg" width="100%" alt="A terminal window typing: het patel, computer engineering student; three shipped systems; 187 tests green"></a>
 
-<p align="center">
-  <a href="https://github.com/het12779-ui/paceguard"><img src="https://img.shields.io/badge/pacing-guardrails-3ddc97?style=flat-square&labelColor=0b0f14" alt="PaceGuard"></a>
-  <a href="https://github.com/het12779-ui/channeltruth"><img src="https://img.shields.io/badge/attribution-5%20models-a78bfa?style=flat-square&labelColor=0b0f14" alt="ChannelTruth"></a>
-  <a href="https://github.com/het12779-ui/adsentry"><img src="https://img.shields.io/badge/anomalies-log%20search-f6b73c?style=flat-square&labelColor=0b0f14" alt="AdSentry"></a>
-</p>
+<p align="center"><sub>
+<a href="https://github.com/het12779-ui/paceguard">paceguard</a> ·
+<a href="https://github.com/het12779-ui/channeltruth">channeltruth</a> ·
+<a href="https://github.com/het12779-ui/adsentry">adsentry</a> ·
+<a href="https://github.com/het12779-ui/deltax-portfolio">the index</a> ·
+<a href="mailto:het12779@gmail.com">mail</a>
+</sub></p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI">
-  <img src="https://img.shields.io/badge/SQL%20Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white" alt="SQL Server">
-  <img src="https://img.shields.io/badge/Vue%203-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white" alt="Vue 3">
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
-  <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions">
-</p>
-
-I build the unglamorous layer of advertising software: the part that decides whether
-₹3,00,000 of budget lands on schedule, which channel actually earned a conversion, and
-whether a campaign broke at 2am while everyone was asleep.
-
-Three services, one lifecycle — **ingest → model → monitor** — each with a real database
-schema, a browser UI, tests that touch no mocks, and a CI job that boots the app and
-curls it.
+I'm a **computer engineering student**. I build the systems that have to be right about
+money, time and blame — then I write down the numbers that prove it. Nine public repos:
+three shipped services with **187 passing tests**, one ML team build, and the prototypes
+that taught me what the shipped ones do differently.
 
 ---
 
-## Selected work
+## `$ cat about.txt`
+
+Most student repos stop at the demo. The three services below are built the other way
+around: a schema first, then the API, then a UI that reads it, then tests that boot the
+real database instead of mocking it. Each one carries its benchmarks in the README, and
+each one is honest about the part it does not solve.
+
+I like the unglamorous half of software — idempotent ingest, integer money, tenant
+columns in every query — because that is the half that decides whether a number on a
+dashboard can be trusted at 2am.
+
+---
+
+## `$ ls -la ~/systems`
 
 <table>
 <tr>
 <td width="33%" valign="top">
 <a href="https://github.com/het12779-ui/paceguard"><img src="assets/paceguard.webp" width="100%" alt="PaceGuard dashboard"></a>
 
-<b><a href="https://github.com/het12779-ui/paceguard">PaceGuard</a></b><br>
-<sub>Budget pacing &amp; spend governance</sub>
+<b><a href="https://github.com/het12779-ui/paceguard">paceguard/</a></b><br>
+<sub>pacing · projections · guardrails</sub>
 
-A campaign spending 70% of its budget by day 5 is not "70% done". Projects final spend
-along the campaign's own curve and raises guardrail alerts that fire once, not every
-hour.
+**Conclusion:** a campaign that has spent 70% of its budget by day 5 is not "70% done".
+Project final spend along that campaign's own curve, alert once, then stop shouting.
 
-<sub><b>46 tests</b> · 72 ms p50 @ 1,000 campaigns · query count constant</sub>
+<sub>46 tests · 72 ms p50 @ 1,000 campaigns</sub>
 </td>
 <td width="33%" valign="top">
 <a href="https://github.com/het12779-ui/channeltruth"><img src="assets/channeltruth.webp" width="100%" alt="ChannelTruth dashboard"></a>
 
-<b><a href="https://github.com/het12779-ui/channeltruth">ChannelTruth</a></b><br>
-<sub>Multi-touch attribution &amp; ROAS</sub>
+<b><a href="https://github.com/het12779-ui/channeltruth">channeltruth/</a></b><br>
+<sub>5 attribution models · roas</sub>
 
-The same journeys scored under five models at once — because "which channel gets
-credit" is a decision, not a fact. Google reads 1.57× under last-touch and 0.55× under
-first-touch; the disagreement is the product.
+**Conclusion:** "which channel earned it" is a decision, not a fact. Score the same
+journeys five ways at once and show the disagreement instead of hiding it behind one
+vendor default.
 
-<sub><b>102 tests</b> · 0.37 s @ 5,000 journeys · identical totals across models</sub>
+<sub>102 tests · 0.37 s @ 5,000 journeys</sub>
 </td>
 <td width="33%" valign="top">
 <a href="https://github.com/het12779-ui/adsentry"><img src="assets/adsentry.webp" width="100%" alt="AdSentry dashboard"></a>
 
-<b><a href="https://github.com/het12779-ui/adsentry">AdSentry</a></b><br>
-<sub>Anomaly detection &amp; log search</sub>
+<b><a href="https://github.com/het12779-ui/adsentry">adsentry/</a></b><br>
+<sub>detection · incidents · log search</sub>
 
-Robust z-scores against same-weekday baselines, stateful incidents that cannot storm,
-and an inverted-index log search in SQL — the "is it broken, and why" layer, without
-standing up a second cluster to page about.
+**Conclusion:** detection is cheap, triage is not. Robust z-scores against same-weekday
+baselines plus stateful incidents that cannot storm, with the log line that explains the
+number in one search.
 
-<sub><b>39 tests</b> · 246 ms @ 1,000 campaigns · 7 ms search @ 20k events</sub>
+<sub>39 tests · 246 ms @ 1,000 campaigns</sub>
 </td>
 </tr>
 </table>
 
-<p align="center"><sub>Every screenshot is the seeded demo running against its own API — no mockups.</sub></p>
+<p align="center"><sub>Every screenshot is the seeded demo hitting its own API — no mockups, no Figma.</sub></p>
 
 ---
 
-## How the three fit together
+## `$ ./topology --explain`
 
-```mermaid
-flowchart LR
-    subgraph sources["Platform sync"]
-        S1["Spend events"]
-        S2["Touches + conversions"]
-        S3["Daily delivery metrics"]
-    end
+<img src="assets/pipeline.svg" width="100%" alt="Animated diagram: spend events, touch points and delivery metrics flow into PaceGuard, ChannelTruth and AdSentry, which converge on a decision">
 
-    subgraph services["Services (FastAPI · SQL · Vue 3)"]
-        P["<b>PaceGuard</b><br/>pacing, projections,<br/>guardrail alerts"]
-        C["<b>ChannelTruth</b><br/>journeys, 5 models,<br/>ROAS by channel"]
-        A["<b>AdSentry</b><br/>detection, incidents,<br/>log search"]
-    end
+Three services, one lifecycle: **ingest → model → monitor**. At-least-once in, idempotent
+out, evaluation never on the read path. The index repo
+[**deltax-portfolio**](https://github.com/het12779-ui/deltax-portfolio) ties them together
+with a demo script and a requirement-by-requirement evidence map.
 
-    S1 -->|idempotent upsert| P
-    S2 -->|journey assembly| C
-    S3 -->|metric restatement| A
+---
 
-    P --> D["<b>Decision</b><br/>shift budget, pause,<br/>or call the client"]
-    C --> D
-    A -->|root cause| D
+## `$ git diff --no-index last_touch first_touch`
 
-    classDef svc fill:#0e1420,stroke:#3ddc97,stroke-width:1px,color:#eef2f8
-    classDef out fill:#0e1420,stroke:#a78bfa,stroke-width:1px,color:#eef2f8
-    class P,C,A svc
-    class D out
+<a href="https://github.com/het12779-ui/channeltruth"><img src="assets/diff.svg" width="100%" alt="A git diff showing Google at 1.57x under last-touch and 0.55x under first-touch on the same journeys"></a>
+
+The most useful thing ChannelTruth produces is not a number. It is the size of the gap
+between two defensible numbers.
+
+---
+
+## `$ ls ~/archive`
+
+The rest of the repos, including the ones that stayed prototypes. A portfolio that hides
+those is a brochure, not a record.
+
+| repo | the one-line conclusion | stack | state |
+|---|---|---|---|
+| [**edulensV2**](https://github.com/het12779-ui/edulensV2) | A PDF becomes a summary, a flashcard deck, a quiz and a concept graph — AI study tools only matter when they point back at the page they read. | React · TypeScript · FastAPI · SQLite · Ollama | active |
+| [**AcousticSpace**](https://github.com/het12779-ui/infotact-project-AcousticSpace-Deepfake-Detection) | Synthetic speech leaks the room it was never recorded in: RIR mismatch survives re-encoding, so physics is a better detector than artifacts. | PyTorch · AST · librosa · FastAPI · React | team build · 3★ |
+| [**AtmoGraph**](https://github.com/het12779-ui/AtmoGraph-Our-Predictor) | A supply chain is a graph before it is a spreadsheet; ripple effects are a propagation problem, not a forecasting one. | Python · graph · NLP · GNN | team repo · milestone branches |
+| [**edulens**](https://github.com/het12779-ui/edulens) | The first attempt: Whisper transcripts plus ChromaDB retrieval for lectures. The pipeline worked; the single-user design did not, and V2 replaced it. | Next.js · FastAPI · Whisper · ChromaDB | prototype · superseded |
+| [**deltax-portfolio**](https://github.com/het12779-ui/deltax-portfolio) | The index: three systems, one demo script, evidence mapped requirement by requirement. | Markdown · assets | index |
+| [**het12779-ui**](https://github.com/het12779-ui/het12779-ui) | This page. Hand-authored SVG and SMIL, generated from one script, no stat-card services. | SVG · SMIL · Python | you are here |
+
+---
+
+## `$ neofetch --off`
+
+<img src="assets/system.svg" width="100%" alt="Neofetch-style panel: languages, systems, 187 tests, tooling, and animated bars for language bytes across all public repos">
+
+---
+
+## `$ ./bench --all`
+
+| | PaceGuard | ChannelTruth | AdSentry |
+|---|---:|---:|---:|
+| Tests, real database | **46** | **102** | **39** |
+| Endpoint p50 | 72 ms @ 1k campaigns | 0.37 s @ 5k journeys | 246 ms @ 1k campaigns |
+| Other measurement | query count constant | totals reconcile across 5 models | 7 ms search @ 20k events |
+| Schema | SQL Server DDL, filtered + partial unique indexes | same | same |
+| UI | Vue 3, no build step | same | same |
+| CI | py3.11 · py3.12 · live smoke | same | same |
+
+Reproduce any row with `make bench` inside the repo. Limits are written into each README
+(unpaginated overview, SQLite demo store) rather than rounded away.
+
+---
+
+## `$ cat principles.md`
+
+```py
+# 1  tenant isolation is a query property, not a filter
+#    account_id is the first argument of every repository call
+#    cross-tenant reads return 404 — never confirm another tenant's id
+# 2  idempotency lives in the database, because retries are certain
+#    tenant-scoped unique constraints, not application-level checks that race
+# 3  money is integer minor units, formatted at the edge
+#    no float, no SQL MONEY, no rounding in the middle of a calculation
+# 4  an alert carries observed, baseline and threshold — or it is noise
+#    "clicks dropped 61% vs the last four Mondays" is a diagnosis
+# 5  evaluation is never a read-path side effect
+#    detection and pacing replay on demand; dashboards stay fast and honest
 ```
 
 ---
 
-## What I care about in code
+## `$ whoami --contact`
 
-**Tenant isolation is a query property, not a filter.** `account_id` is the first argument
-of every repository function and appears in every statement. Cross-tenant reads return
-**404, not 403** — the API must not confirm that another tenant's id exists. A schema test
-fails if a new table forgets the column.
+```console
+het@localhost:~$ curl -s github.com/het12779-ui | jq
+{
+  "role":       "computer engineering student",
+  "location":   "Gandhinagar, India · UTC+5:30",
+  "repos":      9,
+  "mail":       "het12779@gmail.com",
+  "currently":  ["EduLens V2", "learning C#", "reading postmortems"]
+}
+```
 
-**Idempotency belongs in the database.** At-least-once sync means retries will happen.
-Uniqueness lives in tenant-scoped constraints, because application-level checks race.
-
-**Money is integer minor units.** Never `float`, never SQL `MONEY`. Formatting happens at
-the edge, after all arithmetic is exact.
-
-**An alert must be explainable to a non-engineer.** Every one carries the observed value,
-the baseline and the threshold that fired. "Anomaly detected" is not a diagnosis;
-"clicks dropped 61% versus the last four Mondays" is.
-
-**Evaluation is not a read-path side effect.** Detection and pacing run on ingest or an
-explicit trigger, never while serving a dashboard, so latency stays predictable and
-results are replayable.
-
----
-
-## Evidence, not adjectives
-
-| | PaceGuard | ChannelTruth | AdSentry |
-|---|---:|---:|---:|
-| Tests (pytest + BDD, no DB mocks) | 46 | 102 | 39 |
-| Endpoint latency, p50 | 72 ms @ 1k campaigns | 0.37 s @ 5k journeys | 246 ms @ 1k campaigns |
-| Data model | SQL Server DDL, filtered + partial unique indexes | same | same |
-| UI | Vue 3, no build step | same | same |
-| CI | Actions: 3.11 + 3.12 + live smoke | same | same |
-
-Benchmarks are reproducible with `make bench` in each repo; the READMEs state the
-honest limits (unpaginated overview, SQLite demo store) rather than rounding them away.
-
----
-
-## Currently
-
-- **Learning C#** — the services here are Python because that is what I could build and
-  test end to end. The REST contracts, multi-tenant schema and BDD scenarios port
-  directly, and I would rather say that than borrow confidence I have not earned.
-- **Reading** production postmortems from ad-tech outages; the failure modes are
-  consistently boring (pixels, timezones, retries) and consistently expensive.
-- **Open to** Associate Product Engineer / full-stack roles on advertising or data
-  platforms.
-
----
-
-<p align="center">
-  <a href="mailto:het12779@gmail.com"><img src="https://img.shields.io/badge/email-het12779@gmail.com-3ddc97?style=flat-square&labelColor=0b0f14" alt="Email"></a>
-  <a href="https://github.com/het12779-ui?tab=repositories"><img src="https://img.shields.io/badge/repositories-all%20projects-a78bfa?style=flat-square&labelColor=0b0f14" alt="Repositories"></a>
+<p>
+  <a href="mailto:het12779@gmail.com"><img src="https://img.shields.io/badge/mail-het12779%40gmail.com-2ee88a?style=flat-square&labelColor=0b0f14" alt="Email"></a>
+  <a href="https://github.com/het12779-ui?tab=repositories"><img src="https://img.shields.io/badge/repos-9%20public-34d8ff?style=flat-square&labelColor=0b0f14" alt="Repositories"></a>
 </p>
 
-<p align="center"><sub>Built and measured on a laptop, not a slide deck.</sub></p>
+<details>
+<summary><code>$ read source.md</code> — how this page is built</summary>
+
+<br>
+
+Every panel above is a single hand-written SVG with SMIL animations: a typed shell
+session, a monogram that boots pixel by pixel, packets that travel the topology, bars
+that grow once and hold. No badge-only stat cards, no third-party image renderers, no
+templates — so the whole profile is one palette and one type scale, and it still animates
+inside GitHub's `<img>` sandbox.
+
+The generator ships with this repo: [tools/make_assets.py](https://github.com/het12779-ui/het12779-ui/blob/main/tools/make_assets.py).
+Four functions, one palette dict, ~1,200 SVG elements — run it and the panels rebuild
+byte for byte.
+
+</details>
+
+```console
+het@localhost:~$ exit
+logout
+# 187 tests · 9 public repos · measured on a laptop, not a slide deck
+```

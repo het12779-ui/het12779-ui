@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="1200" height="540" role="img" aria-labelledby="t d">
+  <title id="t">Lifecycle: three ingest sources, three services, one decision</title>
+  <desc id="d">Animated data-flow diagram. Spend events feed PaceGuard, touch points feed ChannelTruth, delivery metrics feed AdSentry, and all three converge on a decision node. Packets travel the paths continuously.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#7fffd4" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="glowA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#2ee88a" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#2ee88a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2ee88a" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.05"/>
+    </linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="52"/></filter>
+    <clipPath id="panelClip"><rect x="30" y="24" width="1140" height="492" rx="16"/></clipPath>
+    <filter id="dot" x="-400%" y="-400%" width="900%" height="900%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="540" fill="#04070c"/>
+  <rect width="1200" height="540" fill="url(#grid)"/>
+  <rect x="30" y="24" width="1140" height="492" rx="16" fill="#060b12" stroke="#16303a" stroke-width="1.2"/>
+  <g filter="url(#soft)" clip-path="url(#panelClip)" opacity="0.8">
+    <circle cx="180" cy="80" r="240" fill="url(#glowA)"/>
+    <circle cx="900" cy="480" r="260" fill="url(#glowB)"/>
+  </g>
+  <text x="56" y="66" fill="#2ee88a" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="15">$ ./topology --explain</text>
+  <text x="1146" y="66" fill="#465c6e" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="12" text-anchor="end">fig.01 / one lifecycle</text>
+  <rect x="30" y="86" width="1140" height="1" fill="url(#hdr)"/>
+
+  <g font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="11" fill="#465c6e" letter-spacing="1.6">
+    <text x="64" y="118">SOURCES</text>
+    <text x="430" y="100">SERVICES</text>
+    <text x="878" y="248">OUTCOME</text>
+  </g>
+
+  <g>
+    <rect x="64" y="130" width="196" height="66" rx="10" fill="#081018" stroke="#2ee88a" stroke-opacity="0.34"/>
+    <rect x="64" y="130" width="3" height="66" rx="1.5" fill="#2ee88a" fill-opacity="0.8"/>
+    <text x="82" y="158" fill="#d6e7f3" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="15">spend events</text>
+    <text x="82" y="180" fill="#465c6e" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="11.5">hourly platform sync</text>
+  </g>
+  <g>
+    <rect x="64" y="248" width="196" height="66" rx="10" fill="#081018" stroke="#a78bfa" stroke-opacity="0.34"/>
+    <rect x="64" y="248" width="3" height="66" rx="1.5" fill="#a78bfa" fill-opacity="0.8"/>
+    <text x="82" y="276" fill="#d6e7f3" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="15">touch points</text>
+    <text x="82" y="298" fill="#465c6e" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="11.5">journeys · 30 day window</text>
+  </g>
+  <g>
+    <rect x="64" y="366" width="196" height="66" rx="10" fill="#081018" stroke="#ffc45c" stroke-opacity="0.34"/>
+    <rect x="64" y="366" width="3" height="66" rx="1.5" fill="#ffc45c" fill-opacity="0.8"/>
+    <text x="82" y="394" fill="#d6e7f3" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="15">delivery metrics</text>
+    <text x="82" y="416" fill="#465c6e" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="11.5">daily restatement</text>
+  </g>
+  <g>
+    <rect x="430" y="118" width="336" height="86" rx="12" fill="#091420" stroke="#2ee88a" stroke-opacity="0.5"/>
+    <rect x="430" y="118" width="336" height="86" rx="12" fill="none" stroke="#2ee88a" stroke-opacity="0.18">
+      <animate attributeName="stroke-opacity" values="0.1;0.42;0.1" dur="6.0s" repeatCount="indefinite"/>
+    </rect>
+    <text x="452" y="152" fill="#d6e7f3" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="17">PaceGuard</text>
+    <text x="452" y="176" fill="#7f97a9" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="12">pacing · projections · guardrails</text>
+    <text x="744" y="152" fill="#2ee88a" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="13" text-anchor="end">72 ms</text>
+  </g>
+  <g>
+    <rect x="430" y="238" width="336" height="86" rx="12" fill="#091420" stroke="#a78bfa" stroke-opacity="0.5"/>
+    <rect x="430" y="238" width="336" height="86" rx="12" fill="none" stroke="#a78bfa" stroke-opacity="0.18">
+      <animate attributeName="stroke-opacity" values="0.1;0.42;0.1" dur="7.7s" repeatCount="indefinite"/>
+    </rect>
+    <text x="452" y="272" fill="#d6e7f3" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="17">ChannelTruth</text>
+    <text x="452" y="296" fill="#7f97a9" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="12">5 attribution models · roas</text>
+    <text x="744" y="272" fill="#a78bfa" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="13" text-anchor="end">0.37 s</text>
+  </g>
+  <g>
+    <rect x="430" y="358" width="336" height="86" rx="12" fill="#091420" stroke="#ffc45c" stroke-opacity="0.5"/>
+    <rect x="430" y="358" width="336" height="86" rx="12" fill="none" stroke="#ffc45c" stroke-opacity="0.18">
+      <animate attributeName="stroke-opacity" values="0.1;0.42;0.1" dur="9.4s" repeatCount="indefinite"/>
+    </rect>
+    <text x="452" y="392" fill="#d6e7f3" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="17">AdSentry</text>
+    <text x="452" y="416" fill="#7f97a9" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="12">robust z-scores · incidents</text>
+    <text x="744" y="392" fill="#ffc45c" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="13" text-anchor="end">246 ms</text>
+  </g>
+
+  <g font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="10.5" fill="#465c6e" text-anchor="middle" letter-spacing="0.6">
+    <text x="345" y="180">idempotent upsert</text>
+    <text x="345" y="298">journey assembly</text>
+    <text x="345" y="416">metric restatement</text>
+  </g>
+
+  <path id="p0" d="M260 163 C 340 163, 350 161, 430 161" fill="none" stroke="#1d2e3c" stroke-width="1.2"/>
+  <path d="M260 163 C 340 163, 350 161, 430 161" fill="none" stroke="#2ee88a" stroke-opacity="0.45" stroke-width="1.2" stroke-dasharray="5 9">
+    <animate attributeName="stroke-dashoffset" from="28" to="0" dur="1.8s" repeatCount="indefinite"/>
+  </path>
+  <path id="p1" d="M260 281 C 340 281, 350 281, 430 281" fill="none" stroke="#1d2e3c" stroke-width="1.2"/>
+  <path d="M260 281 C 340 281, 350 281, 430 281" fill="none" stroke="#a78bfa" stroke-opacity="0.45" stroke-width="1.2" stroke-dasharray="5 9">
+    <animate attributeName="stroke-dashoffset" from="28" to="0" dur="1.8s" repeatCount="indefinite"/>
+  </path>
+  <path id="p2" d="M260 399 C 340 399, 350 401, 430 401" fill="none" stroke="#1d2e3c" stroke-width="1.2"/>
+  <path d="M260 399 C 340 399, 350 401, 430 401" fill="none" stroke="#ffc45c" stroke-opacity="0.45" stroke-width="1.2" stroke-dasharray="5 9">
+    <animate attributeName="stroke-dashoffset" from="28" to="0" dur="1.8s" repeatCount="indefinite"/>
+  </path>
+  <path id="o0" d="M766 161 C 822 161, 836 298, 878 298" fill="none" stroke="#1d2e3c" stroke-width="1.2"/>
+  <path d="M766 161 C 822 161, 836 298, 878 298" fill="none" stroke="#2ee88a" stroke-opacity="0.3" stroke-width="1.2" stroke-dasharray="4 10">
+    <animate attributeName="stroke-dashoffset" from="28" to="0" dur="2.4s" repeatCount="indefinite"/>
+  </path>
+  <path id="o1" d="M766 281 C 822 281, 836 328, 878 328" fill="none" stroke="#1d2e3c" stroke-width="1.2"/>
+  <path d="M766 281 C 822 281, 836 328, 878 328" fill="none" stroke="#a78bfa" stroke-opacity="0.3" stroke-width="1.2" stroke-dasharray="4 10">
+    <animate attributeName="stroke-dashoffset" from="28" to="0" dur="2.4s" repeatCount="indefinite"/>
+  </path>
+  <path id="o2" d="M766 401 C 822 401, 836 358, 878 358" fill="none" stroke="#1d2e3c" stroke-width="1.2"/>
+  <path d="M766 401 C 822 401, 836 358, 878 358" fill="none" stroke="#ffc45c" stroke-opacity="0.3" stroke-width="1.2" stroke-dasharray="4 10">
+    <animate attributeName="stroke-dashoffset" from="28" to="0" dur="2.4s" repeatCount="indefinite"/>
+  </path>
+
+    <circle r="3.4" fill="#2ee88a" filter="url(#dot)">
+      <animateMotion dur="3.0s" begin="0.2s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#p0"/>
+      </animateMotion>
+    </circle>
+    <circle r="3.4" fill="#2ee88a" filter="url(#dot)">
+      <animateMotion dur="3.0s" begin="1.7s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#p0"/>
+      </animateMotion>
+    </circle>
+    <circle r="3.4" fill="#a78bfa" filter="url(#dot)">
+      <animateMotion dur="3.4s" begin="0.7s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#p1"/>
+      </animateMotion>
+    </circle>
+    <circle r="3.4" fill="#a78bfa" filter="url(#dot)">
+      <animateMotion dur="3.4s" begin="2.2s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#p1"/>
+      </animateMotion>
+    </circle>
+    <circle r="3.4" fill="#ffc45c" filter="url(#dot)">
+      <animateMotion dur="3.8s" begin="1.2s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#p2"/>
+      </animateMotion>
+    </circle>
+    <circle r="3.4" fill="#ffc45c" filter="url(#dot)">
+      <animateMotion dur="3.8s" begin="2.7s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#p2"/>
+      </animateMotion>
+    </circle>
+    <circle r="3.4" fill="#2ee88a" filter="url(#dot)">
+      <animateMotion dur="4.2s" begin="0.6s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#o0"/>
+      </animateMotion>
+    </circle>
+    <circle r="3.4" fill="#a78bfa" filter="url(#dot)">
+      <animateMotion dur="4.2s" begin="0.8999999999999999s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#o1"/>
+      </animateMotion>
+    </circle>
+    <circle r="3.4" fill="#ffc45c" filter="url(#dot)">
+      <animateMotion dur="4.2s" begin="1.2s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#o2"/>
+      </animateMotion>
+    </circle>
+
+  <g>
+    <rect x="878" y="268" width="268" height="120" rx="12" fill="#0c1016" stroke="#ffc45c" stroke-opacity="0.55"/>
+    <text x="902" y="298" fill="#ffc45c" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="12" letter-spacing="2">DECISION</text>
+    <text x="902" y="324" fill="#d6e7f3" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="14">shift budget</text>
+    <text x="902" y="346" fill="#d6e7f3" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="14">pause a line item</text>
+    <text x="902" y="368" fill="#7f97a9" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="14">or call the client</text>
+  </g>
+
+  <text x="64" y="474" fill="#465c6e" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="12">at-least-once in · idempotent out · evaluation never on the read path</text>
+  <text x="1146" y="474" fill="#465c6e" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="12" text-anchor="end">same tenant model · same schema rules · same CI shape</text>
+</svg>

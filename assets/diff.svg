@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Attribution diff: the same journeys, two verdicts</title>
+  <desc id="d">A git diff of last-touch against first-touch credit for Google, showing 1.57x versus 0.55x on identical journeys, with the five supported models listed on the right.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#7fffd4" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="54"/></filter>
+    <clipPath id="panelClip"><rect x="30" y="24" width="1140" height="372" rx="16"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="420" fill="#04070c"/>
+  <rect width="1200" height="420" fill="url(#grid)"/>
+
+
+  <rect x="30" y="24" width="1140" height="372" rx="16" fill="#060b12" stroke="#16303a" stroke-width="1.2"/>
+  <circle cx="1050" cy="40" r="240" fill="url(#glow)" filter="url(#soft)" clip-path="url(#panelClip)" opacity="0.8"/>
+  <text x="56" y="64" fill="#2ee88a" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="14.5">$ git diff credit/last_touch credit/first_touch</text>
+  <text x="1146" y="64" fill="#465c6e" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="12" text-anchor="end">fig.03 / channeltruth</text>
+  <path d="M30 84H1170" stroke="#ffffff" stroke-opacity="0.07"/>
+
+  <g font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="14.5" xml:space="preserve">
+    <text x="56" y="118" fill="#ff7b72" fill-opacity="0.8">--- a/credit/last_touch</text>
+    <text x="56" y="144" fill="#2ee88a" fill-opacity="0.85">+++ b/credit/first_touch</text>
+    <text x="56" y="182" fill="#34d8ff">@@ google · same 5,000 journeys @@</text>
+
+    <rect x="40" y="198" width="700" height="30" fill="#ff7b72" fill-opacity="0.07"/>
+    <text x="56" y="219" fill="#ff7b72">-  credited_roas  1.57x   # closing click</text>
+
+    <rect x="40" y="232" width="700" height="30" fill="#2ee88a" fill-opacity="0.07"/>
+    <text x="56" y="253" fill="#2ee88a">+  credited_roas  0.55x   # opening click</text>
+
+    <text x="56" y="298" fill="#7f97a9">   conversions: identical</text>
+    <text x="56" y="324" fill="#ffc45c">   verdict: an argument, not a measurement</text>
+  </g>
+
+  <g font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="12.5">
+    <rect x="820" y="100" width="316" height="196" rx="10" fill="#0a1119" stroke="#a78bfa" stroke-opacity="0.35"/>
+    <text x="844" y="128" fill="#a78bfa" font-size="11.5" letter-spacing="1.8">MODELS IN THE BUILD</text>
+    <text x="844" y="158" fill="#d6e7f3">last-touch</text>
+    <text x="844" y="182" fill="#d6e7f3">first-touch</text>
+    <text x="844" y="206" fill="#d6e7f3">linear</text>
+    <text x="844" y="230" fill="#d6e7f3">position-based</text>
+    <text x="844" y="254" fill="#d6e7f3">time-decay</text>
+    <text x="844" y="280" fill="#465c6e" font-size="11">102 tests · totals reconcile</text>
+  </g>
+
+  <path d="M30 352H1170" stroke="#ffffff" stroke-opacity="0.06"/>
+  <text x="56" y="382" fill="#465c6e" font-family="Consolas, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="11.5">read down = which channel earned it · read across = how much the answer depends on the model</text>
+</svg>
